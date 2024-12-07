@@ -1,0 +1,17 @@
+services:
+  hyperf-skeleton-app:
+    container_name: hyperf-skeleton-app
+    image: hyperf-skeleton
+    build:
+      context: .
+    volumes:
+      - ./:/opt/www
+    network_mode: "host"
+    environment:
+      - APP_ENV=dev
+      - SCAN_CACHEABLE=false
+
+  hyperf-skeleton-redis:
+    container_name: hyperf-skeleton-redis
+    image: redis:latest
+    network_mode: "host"

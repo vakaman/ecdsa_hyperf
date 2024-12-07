@@ -1,0 +1,15 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Application\Controller;
+
+class IndexController extends AbstractController
+{
+    public function index(): array
+    {
+        return [
+            'message' => 'index',
+        ];
+    }
+}
